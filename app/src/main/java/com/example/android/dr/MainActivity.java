@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
         if (!hasCamera())
             mybotton.setEnabled(false);
 
+
     }
     //check if the user has a camera
     private boolean hasCamera(){
@@ -37,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
         //take picture and pass along to oonActivityResult
         startActivityForResult(intent, REQUEST_IMAGE_CAPTURE);
     }
-  protected void onActivityResukt(int requestCode,int resultCode,Intent data){
+  protected void onActivityResult(int requestCode,int resultCode,Intent data){
         if (requestCode==REQUEST_IMAGE_CAPTURE && resultCode==RESULT_OK){
             //get the photo
             Bundle extras=data.getExtras();
